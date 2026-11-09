@@ -14,12 +14,17 @@ export interface PlayPageBrowserCanvasGameProps {
   actions?: {
     "start-1"?: () => void;
   };
-
+  highScore?: number | null;
+  gameMessage?: string;
 }
 
 export type PlayPageBrowserCanvasGameActionCallbacks = NonNullable<PlayPageBrowserCanvasGameProps["actions"]>;
 
-export function PlayPageBrowserCanvasGame({ actions }: PlayPageBrowserCanvasGameProps) {
+export function PlayPageBrowserCanvasGame({
+  actions,
+  highScore = null,
+  gameMessage = "",
+}: PlayPageBrowserCanvasGameProps) {
   return (
     <>
       {/* Root Surface: SURF_PLAY_PAGE */}
@@ -42,13 +47,20 @@ export function PlayPageBrowserCanvasGame({ actions }: PlayPageBrowserCanvasGame
               <div className="flex items-center space-x-2 text-sm bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 shadow-inner">
                 <span className="text-xs uppercase tracking-wider text-slate-400 font-semibold">High Score:</span>
                 {/* Observable: OBS_START_GAME_CURRENT_HIGH_SCORE (role: status, name: Current high score, phase before expected: null) */}
-                <span className="font-mono font-bold text-cyan-400" data-setfarm-element-ref="E000002" role="status" aria-label="Current high score" data-observable-refs="OBS_START_GAME_CURRENT_HIGH_SCORE">--</span>
+                <span
+                  className="font-mono font-bold text-cyan-400"
+                  data-setfarm-element-ref="E000002"
+                  role="status"
+                  aria-label="Current high score"
+                  data-observable-refs="OBS_START_GAME_CURRENT_HIGH_SCORE"
+                  data-value={highScore === null ? undefined : String(highScore)}
+                >
+                  {highScore === null ? "--" : highScore}
+                </span>
               </div>
       
               {/* Observable: OBS_START_GAME_GAME_STARTED_MESSAGE (role: status, name: Game message, phase after expected: Game started) */}
-              <div className="hidden text-sm text-emerald-400 font-medium bg-emerald-950/60 border border-emerald-800 px-3 py-1.5 rounded-lg" data-setfarm-element-ref="E000003" role="status" aria-label="Game message" data-observable-refs="OBS_START_GAME_GAME_STARTED_MESSAGE">
-                Game started
-              </div>
+              <div className="hidden text-sm text-emerald-400 font-medium bg-emerald-950/60 border border-emerald-800 px-3 py-1.5 rounded-lg" data-setfarm-element-ref="E000003" role="status" aria-label="Game message" data-observable-refs="OBS_START_GAME_GAME_STARTED_MESSAGE">{gameMessage}</div>
             </div>
           </header>
       
