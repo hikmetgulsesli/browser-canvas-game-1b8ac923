@@ -1,0 +1,118 @@
+{
+  "generatedAt": "2026-11-09T03:12:48.838Z",
+  "screenCount": 1,
+  "screens": {
+    "16ac1ed813fe49939bd24d0a1fb222f2": {
+      "screenId": "16ac1ed813fe49939bd24d0a1fb222f2",
+      "materialSymbolsRequired": false,
+      "sections": [
+        {
+          "tag": "header",
+          "layout": "flex-row",
+          "classes": [
+            "border-b",
+            "border-slate-800",
+            "bg-slate-900/60",
+            "backdrop-blur",
+            "px-6",
+            "py-4",
+            "flex",
+            "items-center",
+            "justify-between"
+          ],
+          "childCount": 6
+        },
+        {
+          "tag": "main",
+          "layout": "flex-col",
+          "classes": [
+            "flex-1",
+            "max-w-7xl",
+            "w-full",
+            "mx-auto",
+            "p-6",
+            "flex",
+            "flex-col",
+            "gap-6"
+          ],
+          "childCount": 13
+        },
+        {
+          "tag": "footer",
+          "layout": "block",
+          "classes": [
+            "border-t",
+            "border-slate-800/80",
+            "bg-slate-950",
+            "px-6",
+            "py-3",
+            "text-center",
+            "text-xs",
+            "text-slate-400"
+          ],
+          "childCount": 0
+        }
+      ],
+      "buttons": [
+        {
+          "kind": "button",
+          "label": "Start",
+          "classes": [
+            "inline-flex",
+            "items-center",
+            "justify-center",
+            "px-6",
+            "py-2.5",
+            "bg-gradient-to-r",
+            "from-cyan-500",
+            "to-blue-600",
+            "hover:from-cyan-400",
+            "hover:to-blue-500",
+            "text-slate-950",
+            "font-bold",
+            "text-sm",
+            "rounded-lg",
+            "shadow-lg",
+            "shadow-cyan-500/25",
+            "transition",
+            "duration-150",
+            "ease-in-out",
+            "cursor-pointer",
+            "active:scale-95",
+            "focus:outline-none",
+            "focus:ring-2",
+            "focus:ring-cyan-400",
+            "focus:ring-offset-2",
+            "focus:ring-offset-slate-950"
+          ],
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "inputs": [],
+      "navLinks": [],
+      "cards": [],
+      "icons": [],
+      "images": [],
+      "cssVars": {},
+      "colorPalette": {},
+      "fonts": [],
+      "layoutHints": {
+        "flexDirection": "col",
+        "gap": "6"
+      },
+      "behaviorContract": [
+        {
+          "kind": "button",
+          "label": "Start",
+          "icon": null,
+          "action": "click-action",
+          "expectedBehavior": "produce visible DOM/state/URL feedback; never empty onClick"
+        }
+      ],
+      "tabBar": [],
+      "title": "Play Page - Browser Canvas Game"
+    }
+  }
+}
